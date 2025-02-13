@@ -1,37 +1,16 @@
-// eslint.config.js
-import { defineConfig } from 'eslint-define-config';
+import globals from "globals";
+import pluginJs from "@eslint/js";
 
-export default defineConfig([
-    {
-        languageOptions: {
-            globals: {
-                window: 'readonly',
-                document: 'readonly',
-                console: 'readonly',
-            },
-            parserOptions: {
-                ecmaVersion: 12,
-                sourceType: 'module',
-            },
-        },
-        rules: {
-            'no-console': 'warn',
-            'no-unused-vars': 'warn',
-        },
-        ignores: [
-            'node_modules/**',
-            'dist/**',
-            'coverage/**',
-            '**/*.test.js',
-            '**/*.spec.js',
-        ],
-    },
-    {
-        rules: {
-            'no-console': 'warn',
-            'no-unused-vars': 'warn',
-            'eqeqeq': 'error',
 
-        }
-    },
-]);
+/** @type {import('eslint').Linter.Config[]} */
+export default [
+  {languageOptions: { globals: {...globals.browser, ...globals.node} }},
+  pluginJs.configs.recommended,
+  {
+    ignores: 
+    ['**/node_modules/**',
+      '**/dist/**',
+      '**/coverage/**',
+    ]
+  }
+];

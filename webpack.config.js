@@ -21,7 +21,7 @@ export const module = {
             use: {
                 loader: 'babel-loader',
                 options: {
-                    cacheDirectory: true, // Включение кэширования
+                    cacheDirectory: true, 
                 },
             },
         },
@@ -30,7 +30,6 @@ export const module = {
 
 export const plugins = [
     new ESLintPlugin({
-        // Отключение ESLint в режиме разработки для повышения производительности
         lintDirtyModulesOnly: true,
         context: resolve(__dirname, 'src'),
     }),

@@ -8,7 +8,6 @@
     "build": "webpack --mode production",
     "lint": "eslint .",
     "test": "jest"
-    
   },
   "author": "",
   "license": "ISC",
