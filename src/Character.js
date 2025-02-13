@@ -14,36 +14,6 @@ class Character {
         this.health = 100;
         this.level = 1;
 
-        
-        
-        switch (type) {
-            case 'Bowerman':
-                this.attack = 25;
-                this.defence = 25;
-                break;
-            case 'Swordsman':
-                this.attack = 40;
-                this.defence = 10;
-                break;
-            case 'Magician':
-                this.attack = 10;
-                this.defence = 40;
-                break;
-            case 'Undead':
-                this.attack = 25;
-                this.defence = 25;
-                break;
-            case 'Zombie':
-                this.attack = 40;
-                this.defence = 10;
-                break;
-            case 'Daemon':
-                this.attack = 10;
-                this.defence = 40;
-                break;
-            default:
-                throw new Error('Некорректный тип персонажа.');
-        }
     }
 
     levelUp() {
@@ -69,40 +39,50 @@ class Character {
 class Bowerman extends Character {
     constructor(name) {
         super(name, 'Bowerman');
+        this.attack = 25;
+        this.defence = 25;
     }
 }
 
 class Swordsman extends Character {
     constructor(name) {
         super(name, 'Swordsman');
+        this.attack = 40;
+        this.defence = 10;
     }
 }
 
 class Magician extends Character {
     constructor(name) {
         super(name, 'Magician');
+        this.attack = 10;
+        this.defence = 40;
     }
 }
 
 class Daemon extends Character {
     constructor(name) {
         super(name, 'Daemon');
+        this.attack = 10;
+        this.defence = 40;
     }
 }
 
 class Undead extends Character {
     constructor(name) {
         super(name, 'Undead');
+        this.attack = 25;
+        this.defence = 25;
     }
 }
 
 class Zombie extends Character {
     constructor(name) {
         super(name, 'Zombie');
+        this.attack = 40;
+        this.defence = 10;
     }
 }
-
-
 
 
 export { Character, Bowerman, Swordsman, Magician, Daemon, Undead, Zombie };

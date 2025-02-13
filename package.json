@@ -6,8 +6,9 @@
   "type": "module",
   "scripts": {
     "build": "webpack --mode production",
-    "lint": "eslint.",
+    "lint": "eslint .",
     "test": "jest"
+    
   },
   "author": "",
   "license": "ISC",
